@@ -3,8 +3,6 @@ Challenge JS - User Management
 https://documenter.getpostman.com/view/8858534/SW7dX7JG#c438d742-5050-4dd1-a
 338-86f3d00cc4e7
 
-https://documenter.getpostman.com/view/8858534/SW7dX7JG#c438d742-5050-4dd1-a
-338-86f3d00cc4e7
 1) Creare una pagina HTML login (email, password) ed una pagina register (email,
 password, age, name).
 
