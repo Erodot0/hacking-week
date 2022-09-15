@@ -1,0 +1,111 @@
+@import "../style/preset/preset.scss";
+
+.container {
+  max-width: 1440px;
+  height: 100%;
+  /* Background-setting */
+  background-image: url("../media/MobileBg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .title {
+    font-size: 30px;
+    color: $primary-text-color;
+    text-align: center;
+    display: grid;
+    place-content: center;
+    height: 20%;
+
+    .bgDesktop {
+      display: none;
+    }
+  }
+
+  .profile {
+    width: 100%;
+    height: 80%;
+    display: grid;
+    place-content: center;
+
+    &-info {
+      background-color: $form-bg-color;
+      min-width: 320px;
+      padding: 30px 10px;
+      margin: auto;
+      @include details();
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+
+      img {
+        border-radius: 50%;
+        max-width: 175px;
+        height: auto;
+      }
+
+      .info {
+        width: 75%;
+        min-height: 34px;
+        padding: 8px 1px;
+        text-align: center;
+        background-color: white;
+        border-radius: 10px;
+        position: relative;
+
+        overflow-y: hidden;
+
+        i {
+          position: absolute;
+          right: 15px;
+          color: $primary-text-color;
+        }
+      }
+
+      .btnLogout {
+        @include buttons();
+      }
+    }
+  }
+
+}
+
+// MEDIA QUERY
+
+@media screen and (min-width: 769px) {
+  .container {
+    margin: 0 auto;
+    width: 100%;
+
+    .title {
+      font-size: 40px;
+    }
+  }
+}
+
+@media screen and (min-width: 991px) {
+  .container {
+    display: flex;
+    background: none;
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 50px;
+      height: 100%;
+
+      .bgDesktop {
+        display: block;
+        height: auto;
+        max-width: 700px;
+      }
+    }
+
+    .profile {
+      height: 100%;
+    }
+  }
+}
