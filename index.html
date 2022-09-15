@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FacciaLibro</title>
+  <link rel="stylesheet" href="assets/style/style.css" />
+  <link rel="shortcut icon" href="assets/media/logo.png" type="image/x-icon" />
+  <script src="https://kit.fontawesome.com/84dc8ddeeb.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <section class="container">
+    <div class="title">
+      <h1>FacciaLibro</h1>
+      <img class="bgDesktop" src="assets/media/DesktopBg.jpg" alt="" />
+    </div>
+    <div class="form-wrapper">
+      <div class="buttons">
+        <button type="button" id="loginbtn">Login</button>
+        <div class="separator"></div>
+        <button type="button" id="registerbtn">Sign up</button>
+      </div>
+
+      <form method="post" onsubmit="" class="register" id="signUp">
+        <div class="inputs">
+          <input type="text" id="name" required placeholder="Name" required />
+          <i class="fa-regular fa-user"></i>
+        </div>
+
+        <div class="inputs">
+          <input type="number" id="age" required placeholder="Age" required />
+          <i class="fa-solid fa-calendar-days"></i>
+        </div>
+
+        <div class="inputs">
+          <input type="email" id="email" required placeholder="Email" required />
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+
+        <div class="inputs">
+          <input type="password" id="password" required placeholder="Password" />
+          <i class="fa-solid fa-unlock-keyhole"></i>
+        </div>
+        <div id="showErrorSignUp"></div>
+        <button class="btnSign" type="submit">SIGN UP</button>
+      </form>
+
+      <form onsubmit="" method="get" class="log" id="login">
+        <div class="inputs">
+          <input type="email" id="logEmail" placeholder="Email" required />
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+
+        <div class="inputs">
+          <input type="password" id="current-password" placeholder="Password" required />
+          <i class="fa-solid fa-unlock-keyhole"></i>
+        </div>
+        <div id="showErrorLogIn"></div>
+        <button class="btnSign" type="submit">LOGIN</button>
+      </form>
+    </div>
+  </section>
+
+  <script type="module" src="assets/javascript/clickEvent.js"></script>
+  <script type="module" src="assets/javascript/register.js"></script>
+  <script type="module" src="assets/javascript/login.js"></script>
+  
+</body>
+
+</html>
