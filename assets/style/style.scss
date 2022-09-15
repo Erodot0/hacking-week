@@ -1,0 +1,144 @@
+@import "preset/preset.scss";
+
+.container {
+  max-width: 1440px;
+  height: 100%;
+  /* Background-setting */
+  background-image: url("../media/MobileBg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .title {
+    font-size: 30px;
+    color: $primary-text-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20%;
+
+    .bgDesktop {
+      display: none;
+    }
+  }
+
+  .form-wrapper {
+    height: 80%;
+    display: grid;
+    place-content: center;
+    gap: 5px;
+
+    .buttons {
+      @include details();
+
+      background-color: $form-bg-color;
+      padding: 1rem 1.5rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      color: $primary-text-color;
+
+      button {
+        font-size: 24px;
+        padding: 10px 15px;
+        min-width: 125px;
+        white-space: nowrap;
+        background-color: inherit;
+
+        cursor: pointer;
+
+        &:hover {
+          font-weight: bold;
+        }
+      }
+
+      .separator {
+        min-width: 40px;
+        height: 2px;
+        background-color: $primary-text-color;
+        transform: rotate(90deg);
+      }
+    }
+
+    .register {
+      @include forms();
+      @include details();
+
+      .inputs {
+        @include inputs();
+
+        i {
+          color: $primary-text-color;
+        }
+      }
+    }
+
+    #showErrorSignUp {
+      color: #ff654d;
+    }
+
+    .btnSign {
+      @include buttons();
+    }
+  }
+
+  .log {
+    @include forms();
+    @include details();
+    display: flex;
+
+    .inputs {
+      @include inputs();
+    }
+
+    #showErrorLogIn {
+      color: #ff654d;
+      font-size: 1rem;
+      font-weight: bold;
+      padding-bottom: 5px;
+    }
+
+    .btnSign {
+      @include buttons();
+    }
+  }
+}
+
+
+// MEDIA QUERY
+
+@media screen and (min-width: 768px) {
+  .container {
+    margin: auto;
+    width: 100%;
+
+    .title {
+      font-size: 40px;
+    }
+  }
+}
+
+@media screen and (min-width: 991px) {
+  .container {
+    display: flex;
+    background: none;
+
+    .title {
+      height: 100%;
+      font-size: 50px;
+
+      .bgDesktop {
+        display: block;
+        max-width: 700px;
+      }
+    }
+
+    .form-wrapper {
+      margin: auto;
+      gap: 20px;
+    }
+  }
+}

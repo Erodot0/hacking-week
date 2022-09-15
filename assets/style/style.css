@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: #f1eff4;
+}
+
+.container {
+  max-width: 1440px;
+  height: 100%;
+  /* Background-setting */
+  background-image: url("../media/MobileBg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.container .title {
+  font-size: 30px;
+  color: #021162;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 20%;
+}
+.container .title .bgDesktop {
+  display: none;
+}
+.container .form-wrapper {
+  height: 80%;
+  display: grid;
+  place-content: center;
+  gap: 5px;
+}
+.container .form-wrapper .buttons {
+  border: solid 1px rgb(189, 189, 189);
+  border-radius: 20px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  background-color: #d5cfdc;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: #021162;
+}
+.container .form-wrapper .buttons button {
+  font-size: 24px;
+  padding: 10px 15px;
+  min-width: 125px;
+  white-space: nowrap;
+  background-color: inherit;
+  cursor: pointer;
+}
+.container .form-wrapper .buttons button:hover {
+  font-weight: bold;
+}
+.container .form-wrapper .buttons .separator {
+  min-width: 40px;
+  height: 2px;
+  background-color: #021162;
+  transform: rotate(90deg);
+}
+.container .form-wrapper .register {
+  min-width: 320px;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 10px 30px;
+  background-color: #d5cfdc;
+  display: none;
+  border: solid 1px rgb(189, 189, 189);
+  border-radius: 20px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+}
+.container .form-wrapper .register .inputs {
+  width: 75%;
+  padding: 8px 1px;
+  border-radius: 10px;
+  background-color: white;
+  margin-bottom: 20px;
+}
+.container .form-wrapper .register .inputs input {
+  width: 80%;
+  margin-left: 10px;
+}
+.container .form-wrapper .register .inputs input:focus {
+  outline: none;
+}
+.container .form-wrapper .register .inputs i {
+  color: #021162;
+}
+.container .form-wrapper #showErrorSignUp {
+  color: #ff654d;
+}
+.container .form-wrapper .btnSign {
+  padding: 12px 18px;
+  color: #021162;
+  background-color: #ffa600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+.container .form-wrapper .btnSign:hover {
+  font-weight: bold;
+  background-color: #e19200;
+  border-inline: 5px solid #021162;
+  transition: 0.5s ease-in-out;
+}
+.container .log {
+  min-width: 320px;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 10px 30px;
+  background-color: #d5cfdc;
+  display: none;
+  border: solid 1px rgb(189, 189, 189);
+  border-radius: 20px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+}
+.container .log .inputs {
+  width: 75%;
+  padding: 8px 1px;
+  border-radius: 10px;
+  background-color: white;
+  margin-bottom: 20px;
+}
+.container .log .inputs input {
+  width: 80%;
+  margin-left: 10px;
+}
+.container .log .inputs input:focus {
+  outline: none;
+}
+.container .log #showErrorLogIn {
+  color: #ff654d;
+  font-size: 1rem;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+.container .log .btnSign {
+  padding: 12px 18px;
+  color: #021162;
+  background-color: #ffa600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+.container .log .btnSign:hover {
+  font-weight: bold;
+  background-color: #e19200;
+  border-inline: 5px solid #021162;
+  transition: 0.5s ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    margin: auto;
+    width: 100%;
+  }
+  .container .title {
+    font-size: 40px;
+  }
+}
+@media screen and (min-width: 991px) {
+  .container {
+    display: flex;
+    background: none;
+  }
+  .container .title {
+    height: 100%;
+    font-size: 50px;
+  }
+  .container .title .bgDesktop {
+    display: block;
+    max-width: 700px;
+  }
+  .container .form-wrapper {
+    margin: auto;
+    gap: 20px;
+  }
+}/*# sourceMappingURL=style.css.map */

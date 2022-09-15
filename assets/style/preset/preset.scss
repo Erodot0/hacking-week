@@ -1,0 +1,74 @@
+// Variables
+$bg-color: #f1eff4; // general background color
+$primary-text-color: #021162; // Darkblue
+
+$btn-bg-color: #ffa600; // button background color
+$btn-bg-color-hover: #e19200; // button background color
+$form-bg-color: #d5cfdc; // form cards background color
+
+// Default settings
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: $bg-color;
+}
+
+
+// Mixin
+@mixin details {
+  border: solid 1px rgb(189, 189, 189);
+  border-radius: 20px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+@mixin buttons {
+  padding: 12px 18px;
+  color: $primary-text-color;
+  background-color: $btn-bg-color;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+
+  &:hover {
+    font-weight: bold;
+    background-color: $btn-bg-color-hover;
+    border-inline: 5px solid $primary-text-color;
+    transition: 0.5s ease-in-out;
+  }
+}
+
+@mixin inputs {
+  width: 75%;
+  padding: 8px 1px;
+  border-radius: 10px;
+  background-color: white;
+  margin-bottom: 20px;
+
+  input {
+    width: 80%;
+    margin-left: 10px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+@mixin forms {
+  min-width: 320px;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 10px 30px;
+  background-color: #d5cfdc;
+  display: none;
+}
